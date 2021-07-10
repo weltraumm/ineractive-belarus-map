@@ -1,79 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .photo {
-         display: inline-block; /* Строчно-блочный элемент */
-         position: absolute; bottom:0; right: 0;/* Относительное позиционирование */
-         
-        }
-        .photo:hover::after {
-         content: attr(data-title); /* Выводим текст */
-         position: absolute; /* Абсолютное позиционирование */
-         right: 30%; top: 50%; /* Положение подсказки */
-         z-index: 1; /* Отображаем подсказку поверх других элементов */
-         background: rgba(175, 186, 229, 0.8); /* Полупрозрачный цвет фона */
-         font-family: serif; /* Гарнитура шрифта */
-         font-size: 16px; /* Размер текста подсказки */
-         color: black;
-         padding: 5px 10px; /* Поля */
-         border: 3px solid rgb(255, 255, 255); /* Параметры рамки */
-         white-space: pre-line; /* что-то для переноса строки внутри data-title */
-        }
-        .map{
-            width: 798px; height: 696px; position:relative; margin-left: auto; margin-right: auto;
-        }
-        .minsk{
-            width: 386.08px; height: 331.17px; position:relative; position: absolute;
-        }
-        .minskobl{
-            width: 530.96px; height: 535.51px; position:relative; position: absolute;
-        }
-        .mogilev{
-            width: 798px; height: 496.36px; position:relative; position: absolute;
-        }
-        .gomel{
-            width: 730.65px; height: 696px; position:relative; position: absolute;
-        }
-        .brest{
-            width: 372.77px; height: 648.24px; position:relative; position: absolute;
-        }
-        .grodno{
-            width: 303.07px; height: 477.57px; position:relative; position: absolute;
-        } 
-        .vitebsk{
-            width: 664.87px; height: 274.02px; position:relative; position: absolute;
-        }
-    
-       </style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.photo {
+		 display: inline-block; /* Строчно-блочный элемент */
+		 position: absolute; bottom:0; right: 0;/* Относительное позиционирование */
+		 
+		}
+		.photo:hover::after {
+		 content: attr(data-title); /* Выводим текст */
+		 position: absolute; /* Абсолютное позиционирование */
+		 right: 30%; top: 50%; /* Положение подсказки */
+		 z-index: 1; /* Отображаем подсказку поверх других элементов */
+		 background: rgba(175, 186, 229, 0.8); /* Полупрозрачный цвет фона */
+		 font-family: serif; /* Гарнитура шрифта */
+		 font-size: 16px; /* Размер текста подсказки */
+		 color: black;
+		 padding: 5px 10px; /* Поля */
+		 border: 3px solid rgb(255, 255, 255); /* Параметры рамки */
+		 white-space: pre-line; /* что-то для переноса строки внутри data-title */
+		}
+		.map		{width: 798px; 	  height: 696px;    position:relative; margin-left: auto; margin-right: auto;}
+		.minsk		{width: 386.08px; height: 331.17px; position: absolute;}
+		.minskobl	{width: 530.96px; height: 535.51px; position: absolute;}
+		.mogilev	{width: 798px;    height: 496.36px; position: absolute;}
+		.gomel		{width: 730.65px; height: 696px;    position: absolute;}
+		.brest		{width: 372.77px; height: 648.24px; position: absolute;}
+		.grodno		{width: 303.07px; height: 477.57px; position: absolute;} 
+		.vitebsk	{width: 664.87px; height: 274.02px; position: absolute;}
+	
+	   </style>
 </head>
 <body>
-    <div class="map" >
-        <div class="gomel">
-            <div class="photo" data-title="Гомельская область   &#010&#010 Физика: 1049 чел.    &#010 Биология: 1057 чел.   &#010 Математика: 1045 чел.   &#010 Финансовая грамотность: 1057 чел. "><img src="gomel.png" alt=""></div>
-        </div>
-        <div class="mogilev">
-            <div class="photo" data-title="Могилевская область  &#010&#010 Физика: 756 чел.     &#010 Биология: 734 чел.    &#010 Математика: 747 чел.    &#010 Финансовая грамотность: 754 чел.  "><img src="mogilev.png" alt=""></div>
-        </div>
-        <div class="brest">
-            <div class="photo" data-title="Брестская область    &#010&#010 Физика: 1272 чел.    &#010 Биология: 1272 чел.   &#010 Математика: 1256 чел.   &#010 Финансовая грамотность: 1256 чел. "><img src="brest.png" alt=""></div>
-        </div>
-        <div class="minskobl">
-            <div class="photo" data-title="Минская область      &#010&#010 Физика: 1033 чел.    &#010 Биология: 1049 чел.   &#010 Математика: 1053 чел.   &#010 Финансовая грамотность: 1052 чел. " ><img src="minskobl.png" alt=""></div>
-        </div>
-        <div class="minsk">
-            <div class="photo" data-title="город Минск          &#010&#010 Физика: 1299 чел.    &#010 Биология: 1283 чел.   &#010 Математика: 1286 чел.   &#010 Финансовая грамотность: 1263 чел. "><img src="minsk.png" alt=""></div>
-        </div>
-        <div class="grodno">
-            <div class="photo" data-title="Гродненская область  &#010&#010 Физика: 718 чел.     &#010 Биология: 721 чел.    &#010 Математика: 709 чел.    &#010 Финансовая грамотность: 751 чел.  "><img src="grodno.png" alt=""></div>
-        </div>
-        <div class="vitebsk">
-            <div class="photo" data-title="Витебская область    &#010&#010 Физика: 804 чел.     &#010 Биология: 725 чел.    &#010 Математика: 782 чел.    &#010 Финансовая грамотность: 789 чел.  "><img src="vitebsk.png" alt=""></div>
-        </div>
-    </div>
+	<div class="map" >
+		<div class="gomel">
+			<div class="photo" data-title="Гомельская область   &#010&#010 Физика: 1049 чел.    &#010 Биология: 1057 чел.   &#010 Математика: 1045 чел.   &#010 Финансовая грамотность: 1057 чел. "><img src="gomel.png" alt=""></div>
+		</div>
+		<div class="mogilev">
+			<div class="photo" data-title="Могилевская область  &#010&#010 Физика: 756 чел.     &#010 Биология: 734 чел.    &#010 Математика: 747 чел.    &#010 Финансовая грамотность: 754 чел.  "><img src="mogilev.png" alt=""></div>
+		</div>
+		<div class="brest">
+			<div class="photo" data-title="Брестская область    &#010&#010 Физика: 1272 чел.    &#010 Биология: 1272 чел.   &#010 Математика: 1256 чел.   &#010 Финансовая грамотность: 1256 чел. "><img src="brest.png" alt=""></div>
+		</div>
+		<div class="minskobl">
+			<div class="photo" data-title="Минская область      &#010&#010 Физика: 1033 чел.    &#010 Биология: 1049 чел.   &#010 Математика: 1053 чел.   &#010 Финансовая грамотность: 1052 чел. " ><img src="minskobl.png" alt=""></div>
+		</div>
+		<div class="minsk">
+			<div class="photo" data-title="город Минск          &#010&#010 Физика: 1299 чел.    &#010 Биология: 1283 чел.   &#010 Математика: 1286 чел.   &#010 Финансовая грамотность: 1263 чел. "><img src="minsk.png" alt=""></div>
+		</div>
+		<div class="grodno">
+			<div class="photo" data-title="Гродненская область  &#010&#010 Физика: 718 чел.     &#010 Биология: 721 чел.    &#010 Математика: 709 чел.    &#010 Финансовая грамотность: 751 чел.  "><img src="grodno.png" alt=""></div>
+		</div>
+		<div class="vitebsk">
+			<div class="photo" data-title="Витебская область    &#010&#010 Физика: 804 чел.     &#010 Биология: 725 чел.    &#010 Математика: 782 чел.    &#010 Финансовая грамотность: 789 чел.  "><img src="vitebsk.png" alt=""></div>
+		</div>
+	</div>
 </body>
 </html>
